@@ -36,7 +36,7 @@ public static Rotor rotorFactory(String str, String notches)
 public void advance()
 public int convertForward(int p)
 public int convertBackward(int p)
-
+##
 
 ## Tricks & tips
 
