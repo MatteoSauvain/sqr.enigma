@@ -17,13 +17,26 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
-Void setPositions(String setting)
+public String convert(String msg)
+This method is already tested with the validation test already created in the MachineTest class. 
+
+char convertChar(char c)
+This method could be tested but it's too long to test. 
+
+void advanceRotors()
 
 ### Classe Reflector
 #### function
+Don't going to test the Reflector's rotorFactory() method cause the code which is contained inside is part of the parent class's rotorFactory() method. So, I am going to test the Rotor's rotorFactory() method in 2 parts, the first one which is the part contained in the parent's and child's method.
+
 
 ### Classe Rotor
 #### function
+public static Rotor rotorFactory(String str, String notches)
+public void advance()
+public int convertForward(int p)
+public int convertBackward(int p)
+
 
 ## Tricks & tips
 
