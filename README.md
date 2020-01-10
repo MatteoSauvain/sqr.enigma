@@ -27,7 +27,7 @@ void advanceRotors()
 
 ### Classe Reflector
 #### function
-Don't going to test the Reflector's rotorFactory() method cause the code which is contained inside is part of the parent class's rotorFactory() method. So, I am going to test the Rotor's rotorFactory() method in 2 parts, the first one which is the part contained in the parent's and child's method.
+Not going to test the Reflector's rotorFactory() method cause the code which is contained inside is part of the parent class's rotorFactory() method. So, I am going to test the Rotor's rotorFactory() method in 2 parts, the first one which is the part contained in the parent's and child's method.
 
 
 ### Classe Rotor
