@@ -7,6 +7,7 @@ public class Machine {
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	//Constructor of Machine class
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
@@ -14,6 +15,7 @@ public class Machine {
 		rightRotor = right;
 	}
 
+	//Defines the position of each rotor with the setting parameter received in this class' configure method.
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -21,13 +23,19 @@ public class Machine {
 		middleRotor.setPosition(Rotor.toIndex(charSettings[2]));
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
-	
+
+	//Calls the constructor and define their position
+	//Defines the reflector and the 3 rotors
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
 
+	//Converts the message into a char array and calls the convertChar() function
+	//Calls the convertChar() function for each character of the message
+	//Rebuilds a String variable with each character added to the "result" variable
+	//Returns the converted message
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();

@@ -6,7 +6,8 @@ package enigma;
 public class Reflector extends Rotor {
 	
 	int[] reflection;
-	
+
+	//Creates a reflector
 	public static Reflector reflectorFactory(String str){
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
@@ -19,7 +20,8 @@ public class Reflector extends Rotor {
 	private Reflector(int[] r){
 		reflection = r;
 	}
-        
+
+	//Returns the position
     public int convertForward(int p) {
         return ((reflection[((p)%26+26)%26])%26+26)%26;
     }

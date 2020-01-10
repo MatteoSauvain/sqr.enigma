@@ -17,6 +17,7 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
+Void setPositions(String setting)
 
 ### Classe Reflector
 #### function

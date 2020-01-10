@@ -8,14 +8,18 @@ public class Rotor {
     private int notch1 = -1;
     private int notch2 = -1;
 
+    //Returns the position of the rotor
     public int getPosition() {
         return position;
     }
 
+    //Defines the position of the rotor
     public void setPosition(int posn) {
         position = posn;
     }
-    
+
+	//Puts in a good format the message received
+	//Calls the constructor after, in order to create a new object Rotor
 	public static Rotor rotorFactory(String str, String notches){
 		char[] s = str.trim().replace(" ", "").toCharArray();
 		int[] cipher = new int[26];
@@ -30,7 +34,8 @@ public class Rotor {
 		}
 		
 	}
-	
+
+	//Constructor of Rotor class
 	private Rotor(int[] c, int notch1, int notch2) {
 		this.notch1 = notch1;
 		this.notch2 = notch2;
@@ -48,14 +53,17 @@ public class Rotor {
 		
 	}
 
+	//Returns the position of the character of the output which is going to be linked to the input
     public int convertForward(int p) {
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
 
+	//Returns the position of the character of the input which is going to be linked to the output
     public int convertBackward(int e) {
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
-    
+
+    //Changes the position of the rotor
     public void advance() {
         position = (position+1) % 26;
     }
